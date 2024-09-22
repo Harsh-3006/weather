@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="back">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" style="color: blue;" href="#"><i class="fa-solid fa-sun text-primary"></i>
+            WeatherWhiz</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Search by location                                   
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="mx-3">Latitude</li>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-4 mx-1" type="search" id="lat"  aria-label="Search">
+                  </form>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li class="mx-3" >Longitude</li>
+                  <form class="d-flex" role="search">
+                    <input id="lon" class="form-control me-4 mx-1" type="search"  aria-label="Search">
+                    </form>
+                    <button class="btn btn-outline-primary my-2 mx-1 btn-sm" id="action" type="submit">Search</button>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <button id="getCurrent" class="btn btn-outline-primary">Get current location weather</button>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" id="searchBar" type="search" placeholder="Search by city" aria-label="Search">
+              <button class="btn btn-outline-primary" id="searbycon" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container display-5 my-5 mx-5 px-5 py-5  rounded shadow fw-bold" style="background-color: rgb(184, 206, 219); width: 35vw; height: 30vh;" id="apc">
+        <div id="tobeHiddle" class="text-primary" ><i class="fa-solid fa-temperature-three-quarters text-primary"></i>
+            Temperature <p id="display"></p>
+        </div>
+        <div class="container display-5 my-5 mx-5 px-5 py-5  rounded shadow fw-bold" style="background-color: rgb(184, 206, 219); width: 35vw; height: 30vh;" id="apc">
+            <div id="tobeHiddle" class="text-primary"><i class="fa-solid fa-temperature-low"></i>
+                Humidity <p id="display"></p>
+            </div>
+            <div class="container display-5 my-5 mx-5 px-5 py-5  rounded shadow fw-bold" style="background-color: rgb(184, 206, 219); width: 35vw; height: 30vh;" id="apc">
+                <div id="tobeHiddle" class="text-primary"><i class="fa-solid fa-fan"></i>
+                    Wind Speed <p id="display"></p>
+                </div>
+        <img style="display: none;" id="show" src="/img/IMG-20230826-WA0050.jpg" alt="Image">
+        </div>
+        <!-- <button class="btn btn-outline-danger"> </button>
+        <img src="" alt="Image"> -->
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
